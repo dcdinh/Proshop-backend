@@ -16,7 +16,8 @@
 <body>
   <div class="row">
     <div class="col-6 offset-md-3">
-      <form>
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
         <div class="form-group">
           <label for="exampleInputEmail1">Username</label>
           <input type="text" class="form-control" name="username" id="exampleInputEmail1">
