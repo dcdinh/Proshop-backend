@@ -13,7 +13,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     def get_image_url(self, obj):
         request = self.context.get("request")
-        return request.build_absolute_uri(obj.image.url)
+        return request.build_absolute_uri(obj.get_image())
 
 
 class UserSerializer(serializers.ModelSerializer):
